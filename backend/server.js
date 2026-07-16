@@ -23,10 +23,12 @@ app.use("/api/bookmarks", bookmarkRoutes);
 const passwordRoutes = require("./routes/password");
 app.use("/api/passwords", passwordRoutes);
 
-
 const dns = require("node:dns");
 
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+if (process.env.NODE_ENV !== "production") {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+}
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
