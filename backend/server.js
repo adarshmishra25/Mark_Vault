@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: "https://mark-vault.netlify.app/",
+  origin: "https://mark-vault.netlify.app",
   credentials: true,
 }));
 
