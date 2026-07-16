@@ -1,10 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const authMiddleware = require("./middleware/authMiddleware.js");
 
 require("dotenv").config();
 
 const app = express();
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
 
 app.use(express.json());
 
@@ -13,6 +19,9 @@ app.use("/api/auth", authRoutes);
 
 const bookmarkRoutes = require("./routes/bookmark");
 app.use("/api/bookmarks", bookmarkRoutes);
+
+const passwordRoutes = require("./routes/password");
+app.use("/api/passwords", passwordRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
