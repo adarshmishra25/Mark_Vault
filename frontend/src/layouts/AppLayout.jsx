@@ -7,7 +7,7 @@ export default function AppLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gray-100">
+    <div className="min-h-dvh overflow-x-hidden bg-gray-100">
       {/* Mobile Navbar */}
       <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b bg-white px-4 shadow-sm lg:hidden">
         <button
@@ -49,7 +49,7 @@ export default function AppLayout() {
         )}
 
         {/* Main Content */}
-        <main className="min-w-0 flex-1 overflow-x-hidden px-4 py-6 sm:px-6 lg:ml-64 lg:px-8 lg:py-8">
+        <main className="flex-1 min-w-0 overflow-x-hidden px-4 py-6 sm:px-6 lg:ml-64 lg:px-8 lg:py-8">
           <Outlet />
         </main>
       </div>
