@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../services/temp";
+import api from "../services/api";
 import {
   FaSearch,
   FaEdit,
