@@ -42,9 +42,10 @@ export default function Sidebar({
               open ? "translate-x-0" : "-translate-x-full"
             }`
           : "hidden lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:h-screen lg:w-64"
-      } flex flex-col justify-between bg-slate-900 p-6`}
+      } flex flex-col bg-slate-900`}
     >
-      <div>
+      {/* Scrollable Content */}
+      <div className="flex-1 overflow-y-auto p-6">
         {/* Mobile Close Button */}
         {mobile && (
           <div className="mb-8 flex justify-end lg:hidden">
@@ -93,14 +94,16 @@ export default function Sidebar({
         </nav>
       </div>
 
-      {/* Logout */}
-      <button
-        onClick={logout}
-        className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 py-3 font-medium text-white transition hover:bg-red-600"
-      >
-        <FaSignOutAlt />
-        Logout
-      </button>
+      {/* Fixed Logout */}
+      <div className="border-t border-slate-700 p-6">
+        <button
+          onClick={logout}
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 py-3 font-medium text-white transition hover:bg-red-600"
+        >
+          <FaSignOutAlt />
+          Logout
+        </button>
+      </div>
     </aside>
   );
 }
