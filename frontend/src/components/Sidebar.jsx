@@ -1,4 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
+
+import logo from "../assets/logo.png";
+
 import {
   FaHome,
   FaBookmark,
@@ -56,7 +59,7 @@ export default function Sidebar({
 
         {/* Logo */}
         <div className="mb-10 flex items-center gap-3">
-          <img src="/src/assets/logo.png" alt="MarkVault" className="w-11" />
+          <img src={logo} alt="MarkVault" className="w-11" />
 
           <h1 className="text-2xl font-bold text-white">
             Mark<span className="text-blue-500">Vault</span>
