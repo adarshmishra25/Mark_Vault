@@ -71,21 +71,26 @@ MarkVault is a secure full-stack web application that allows users to safely man
 ## 📁 Project Structure
 
 ```
-MarkVault
+MARK_VAULT/
 │
-├── client/
-│   ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-│
-├── server/
-│   ├── config/
-│   ├── middleware/
+├── backend/
 │   ├── models/
 │   ├── routes/
-│   └── utils/
+│   ├── middleware/
+│   ├── utils/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── layouts/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
 │
 └── README.md
 ```
