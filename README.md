@@ -195,7 +195,7 @@ npm run dev
 
 GitHub: https://github.com/adarshmishra25
 
-LinkedIn: *(Add your LinkedIn Profile)*
+LinkedIn: https://www.linkedin.com/in/adarsh-mishra-0b0061305
 
 ---
 
